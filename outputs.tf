@@ -1,8 +1,3 @@
-output "token_ids" {
-  description = "Map of provision token IDs keyed by name"
-  value       = teleport_provision_token.aws.*.id
-}
-
 output "role_names" {
   description = "Set of role names managed by this module"
   value       = keys(teleport_role.this)
