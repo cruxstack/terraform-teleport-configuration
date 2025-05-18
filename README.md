@@ -1,4 +1,4 @@
-# terraform-null-teleport
+# terraform-teleport-management
 
 Opinionated Terraform module for **managing Teleport clusters**. It works for
 both **Teleport Cloud** and **self-hosted cluster**. The module provisions and
@@ -12,7 +12,7 @@ maintains:
 
 ```hcl
 module "teleport" {
-  source  = "cruxstack/teleport/null"
+  source  = "cruxstack/management/teleport"
   version = "x.x.x"
 
   tp_domain = "teleport.example.com"
