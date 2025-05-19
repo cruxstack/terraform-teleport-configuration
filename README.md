@@ -1,18 +1,18 @@
-# terraform-teleport-management
+# terraform-teleport-configuration
 
-Opinionated Terraform module for **managing Teleport clusters**. It works for
-both **Teleport Cloud** and **self-hosted cluster**. The module provisions and
-maintains:
+Opinionated Terraform module for **configurating Teleport clusters**. It works
+for both **Teleport Cloud** and **self-hosted cluster**. The module provisions
+and maintains:
 
-* **Provision tokens** (IAM/EC2, GitHub)
-* **Roles** with allow/deny rules and options
-* **Identity-provider connectors** (GitHub, Okta, generic SAML)
+- Provision tokens using IAM, EC2 GitHub, etc. join methods
+- Roles with allow/deny rules and options
+- Identity-provider connectors for GitHub, Okta, generic SAML, etc.
 
 ## Usage
 
 ```hcl
 module "teleport" {
-  source  = "cruxstack/management/teleport"
+  source  = "cruxstack/configuration/teleport"
   version = "x.x.x"
 
   tp_domain = "teleport.example.com"
